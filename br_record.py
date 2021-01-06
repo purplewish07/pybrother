@@ -44,8 +44,8 @@ def get_from_brother(ip='127.0.0.1', port=10000):
 		# lines = client.recv(1024).decode()
 		print(lines)
 		lines = lines.split(os.linesep)
-		lines = [line for line in lines if line.startswith('A01')]  # 选出以A01开头的行
-		fields = lines[0].split(',')  # 拆分出字段，第3个字段就是目标[工件计数]
+		lines = [line for line in lines if line.startswith('A01')]  # 選出以A01開頭的行
+		fields = lines[0].split(',') # 拆分出字段，第3個字段就是目標[工件計數]
 		parts = int(fields[2].strip())
 		print('部品數量:',int(fields[2].strip()),'\n')
 		# 取得狀態
